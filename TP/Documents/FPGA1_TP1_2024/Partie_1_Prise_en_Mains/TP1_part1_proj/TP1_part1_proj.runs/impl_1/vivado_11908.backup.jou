@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Feb  3 10:23:59 2026
+# Process ID: 11908
+# Current directory: C:/FPGA/FPGA1_TP1_2024/Partie_1_Prise_en_Mains/TP1_part1_proj/TP1_part1_proj.runs/impl_1
+# Command line: vivado.exe -log Test.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Test.tcl -notrace
+# Log file: C:/FPGA/FPGA1_TP1_2024/Partie_1_Prise_en_Mains/TP1_part1_proj/TP1_part1_proj.runs/impl_1/Test.vdi
+# Journal file: C:/FPGA/FPGA1_TP1_2024/Partie_1_Prise_en_Mains/TP1_part1_proj/TP1_part1_proj.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Test.tcl -notrace

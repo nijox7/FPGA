@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Feb 10 12:24:07 2026
+# Process ID: 4696
+# Current directory: D:/Cours/FAC/Master/M1/S2/FPGA/TP/TP1part1/TP1part1.runs/synth_1
+# Command line: vivado.exe -log IMPULSE_COUNT.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source IMPULSE_COUNT.tcl
+# Log file: D:/Cours/FAC/Master/M1/S2/FPGA/TP/TP1part1/TP1part1.runs/synth_1/IMPULSE_COUNT.vds
+# Journal file: D:/Cours/FAC/Master/M1/S2/FPGA/TP/TP1part1/TP1part1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source IMPULSE_COUNT.tcl -notrace

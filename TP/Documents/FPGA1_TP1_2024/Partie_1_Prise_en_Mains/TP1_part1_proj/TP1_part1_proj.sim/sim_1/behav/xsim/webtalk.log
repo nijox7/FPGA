@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Feb  3 10:13:12 2026
+# Process ID: 12544
+# Current directory: C:/FPGA/FPGA1_TP1_2024/Partie_1_Prise_en_Mains/TP1_part1_proj/TP1_part1_proj.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/FPGA/FPGA1_TP1_2024/Partie_1_Prise_en_Mains/TP1_part1_proj/TP1_part1_proj.sim/sim_1/behav/xsim/xsim.dir/TB_Test_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/FPGA/FPGA1_TP1_2024/Partie_1_Prise_en_Mains/TP1_part1_proj/TP1_part1_proj.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/FPGA/FPGA1_TP1_2024/Partie_1_Prise_en_Mains/TP1_part1_proj/TP1_part1_proj.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/FPGA/FPGA1_TP1_2024/Partie_1_Prise_en_Mains/TP1_part1_proj/TP1_part1_proj.sim/sim_1/behav/xsim/xsim.dir/TB_Test_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Feb  3 10:13:12 2026...

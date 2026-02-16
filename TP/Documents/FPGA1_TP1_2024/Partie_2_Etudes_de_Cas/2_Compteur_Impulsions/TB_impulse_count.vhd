@@ -28,6 +28,7 @@ ARCHITECTURE behavior OF TB_impulse_count IS
  
     COMPONENT IMPULSE_COUNT
     PORT(
+         Clk : IN std_logic;
          Reset : IN  std_logic;
          Button_L : IN  std_logic;
          Button_C : IN  std_logic;
@@ -38,6 +39,7 @@ ARCHITECTURE behavior OF TB_impulse_count IS
     
 
    --Inputs
+   signal Clk : std_logic := '0';
    signal Reset : std_logic := '0';
    signal Button_L : std_logic := '0';
    signal Button_C : std_logic := '0';
@@ -53,6 +55,7 @@ BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
    uut: IMPULSE_COUNT PORT MAP (
+          Clk => Clk,
           Reset => Reset,
           Button_L => Button_L,
           Button_C => Button_C,
@@ -62,6 +65,8 @@ BEGIN
 
 
 	-- Evolution des Entrées
+	Clk <= not Clk after 1 ns;
+	
 	Reset <= '1' after 2 ns, '0' after 10 ns;
 	
 	Button_L <= '1' after 100 ns, '0' after 150 ns, '1' after 200 ns, '0' after 250 ns, '1' after 300 ns, '0' after 350 ns,

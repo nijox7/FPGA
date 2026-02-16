@@ -22,7 +22,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 use ieee.std_logic_unsigned.all;
 
 entity IMPULSE_COUNT is
-    Port ( Reset : in  STD_LOGIC;								-- Reset Asynchrone
+    Port ( Clk : in STD_LOGIC;
+           Reset : in  STD_LOGIC;								-- Reset Asynchrone
            Button_L : in  STD_LOGIC;							-- Bouton Left
            Button_C : in  STD_LOGIC;							-- Bouton Center
            Count : out  STD_LOGIC_VECTOR (3 downto 0);	-- Compteur d'Impulsions
@@ -31,7 +32,11 @@ end IMPULSE_COUNT;
 
 architecture Behavioral of IMPULSE_COUNT is
 
-signal cpt: std_logic_vector(3 downto 0);		-- Compteur d'Impulsions
+signal cpt: std_logic_vector(3 downto 0);		-- Compteur d'signal
+signal cpt_l: std_logic_vector(3 downto 0);
+signal cpt_c: std_logic_vector(3 downto 0);
+signal incremented: boolean;
+signal decremented: boolean;
 
 begin
 
@@ -40,22 +45,35 @@ begin
 	-------------------------
 	-- Gestion du Compteur --
 	-------------------------
-	process(reset,Button_L,Button_C)
+	process(clk,reset,Button_L,Button_C)
 
 	begin
 
 		-- Reset Asynchrone
-		if reset='1' then cpt<="0000"; end if;
-
-		-- Incrémentation Si on Appuie sur le Bouton Left
-		if rising_edge(Button_L) then			
-			cpt<=cpt+1;
-		end if;
+		if reset='1' then 
+		      cpt<="0000";
+		      decremented <= FALSE;
+		      incremented <= FALSE;
 		
-		-- Décrémentation Si on Appuie sur le Bouton Center
-		if rising_edge(Button_C) then			
-            cpt<=cpt-1;
-        end if;
+		-- Mise à jour du compteur
+		elsif rising_edge(Clk) then
+		      if Button_C = '1' and Button_L = '1' then
+		             decremented <= TRUE;
+		             incremented <= TRUE;
+		      elsif Button_L = '1' and Button_C = '0' and not incremented then
+		             cpt <= cpt + 1;
+		             incremented <= TRUE;
+		             decremented <= FALSE;
+              elsif Button_C = '1' and Button_L = '0' and not decremented then
+		             cpt <= cpt - 1;
+		             decremented <= TRUE;
+		             incremented <= FALSE;
+		      elsif Button_C = '0' and Button_L = '0' then
+		             decremented <= FALSE;
+		             incremented <= FALSE;
+		      end if;
+
+		end if;
 		
 	end process;
 

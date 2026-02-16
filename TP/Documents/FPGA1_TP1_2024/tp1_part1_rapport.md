@@ -24,7 +24,7 @@ On a donc changé la condition en remplaçant 70 000 000 par 20 000 000.
 ### Observation
 -Le code VHDL:
 La fonctionnalité décrite par ce code semble être un compteur qui est incrémenté et décrementé en fonction de 2 boutons.
-Un signal de sortie sup indique s'il est supérieur à 9.\
+Un signal de sortie sup indique s'il est supérieur à 9.
 
 - Le testbench:
 Le testbench commence par un signal reset de 2ns.
@@ -35,29 +35,21 @@ On a donc, 3 -> 1 -> 10.
 
 - Implémentation:
 Seul le bouton central fonctionne, le bouton de gauche n'a aucun effet sur le compteur.
-Même en changeant le bouton utilisé, le même comportement ce reproduit.
-Le problème vient donc probablement du .xdc.
-
 Pas d'observation du phénomène de rebond.
-Le phénomène de rebond peut empêcher le comportement attendu du programme.
-En effet, lorsque l'on appui sur un bouton, plusieurs incrémentation semblent se réaliser.
 
 ### Analyse
 - Un critical warning nous dit que 'set_property' attend au moins un objet dans le '.xdc'.
-On remarque dans le schéma que 'button_L' et 'reset' ne sont connectés à rien.
-Celà explique donc le non fonctionnement du bouton d'incrémentation.
+On remarque dans le schéma que 'button_L' et 'reset' ne sont connectés à rien, ce qui ne correspond pas au comportement voulu.
+Celà explique donc le dysfonctionnement du bouton d'incrémentation.
 
-- Le code UUT est composé de plusieurs instances. Il commence par instancié le module 'impuls_count'.
+- Le code UUT est composé de plusieurs instances. Il commence par instancier le module 'impuls_count'.
 Il déclare des signaux supplémentaires comme 'Button_C_IBUF' et 'minusOp'.
 
-- Après la simulation post synthesis, le chronogramme montre que le bouton d'incrémentation n'a plus d'effet sur le compteur.
-Au bout de 400 ns il est donc décrementé alors qu'il est à 0, il passe donc à la 15, puis à 14 au bout de 500ns.
+- Le chronogramme de la simulation post synthèse montre que le bouton d'incrémentation n'a plus d'effet sur le compteur. Seules les évènements liés aux boutons central se produisent.
 
-- Le comportement post-synthèse correspond au comportement testé sur la carte.
+- Le comportement post-synthèse correspond au comportement testé sur la carte, le même problème est présent.
 
 
 ### Correction et vérification
-Voir fichier postsynthes.vhd pour le code post synthese.
-Seul le bouton C (center) semble être géré
+En mettant deux signaux de compteur différents (cpt_1 et cpt_c), et en ajoutant 'set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets Button_L_IBUF]' l'implémentation fonctionne mais le phénomène de rebond n'est pas réglé.
 
-A REVOIR A LA MAISON

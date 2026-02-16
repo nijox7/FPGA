@@ -1,4 +1,4 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/FPGA/FPGA/TP/Documents/FPGA1_TP1_2024/Partie_2_Etudes_de_Cas/2_Compteur_Impulsions/impulse_count_.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/FPGA/FPGA/TP/TP1part1/TP1part1.sim/sim_1/synth/func/xsim/TB_impulse_count_func_synth.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'IMPULSE_COUNT'
 INFO: [VRFC 10-163] Analyzing VHDL file "D:/FPGA/FPGA/TP/Documents/FPGA1_TP1_2024/Partie_2_Etudes_de_Cas/2_Compteur_Impulsions/TB_impulse_count.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'TB_impulse_count'

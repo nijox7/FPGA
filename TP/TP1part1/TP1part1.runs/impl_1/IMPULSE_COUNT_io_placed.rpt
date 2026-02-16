@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date                      : Mon Feb 16 13:53:11 2026
+| Date                      : Mon Feb 16 19:59:30 2026
 | Host                      : DESKTOP-8A3KVDG running 64-bit major release  (build 9200)
 | Command                   : report_io -file IMPULSE_COUNT_io_placed.rpt
 | Design                    : IMPULSE_COUNT
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|             8 |
+|             9 |
 +---------------+
 
 
@@ -258,7 +258,7 @@ Table of Contents
 | W2         |             | High Range | IO_L5N_T0_34                 | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | W3         |             | High Range | IO_L6N_T0_VREF_34            | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | W4         |             | High Range | IO_L12N_T1_MRCC_34           | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| W5         |             | High Range | IO_L12P_T1_MRCC_34           | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| W5         | Clk         | High Range | IO_L12P_T1_MRCC_34           | INPUT         | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | W6         |             | High Range | IO_L13N_T2_MRCC_34           | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | W7         |             | High Range | IO_L13P_T2_MRCC_34           | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | W8         |             | Dedicated  | TDO_0                        | Config        |             |       0 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

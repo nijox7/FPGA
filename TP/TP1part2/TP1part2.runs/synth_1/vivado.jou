@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon Feb 16 23:15:21 2026
+# Process ID: 14084
+# Current directory: D:/FPGA/FPGA/TP/TP1part2/TP1part2.runs/synth_1
+# Command line: vivado.exe -log TP2_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TP2_wrapper.tcl
+# Log file: D:/FPGA/FPGA/TP/TP1part2/TP1part2.runs/synth_1/TP2_wrapper.vds
+# Journal file: D:/FPGA/FPGA/TP/TP1part2/TP1part2.runs/synth_1\vivado.jou
+# Running On: DESKTOP-8A3KVDG, OS: Windows, CPU Frequency: 3408 MHz, CPU Physical cores: 4, Host memory: 17101 MB
+#-----------------------------------------------------------
+source TP2_wrapper.tcl -notrace

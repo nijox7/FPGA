@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"TB_impulse_count_func_synth.vhd" \
-"../../../../../../Documents/TP1_FPGA/Partie_2_Etudes_de_Cas/2_Compteur_Impulsions/TB_impulse_count.vhd" \
-
-# Do not sort compile order
-nosort

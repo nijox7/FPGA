@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Runs Version="1" Minor="0">
-	<Run Id="synth_1" LaunchDir="D:/Cours/FAC/Master/M1/S2/FPGA/TP/TP1part1/TP1part1.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-	<Run Id="impl_1" LaunchDir="D:/Cours/FAC/Master/M1/S2/FPGA/TP/TP1part1/TP1part1.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+	<Run Id="synth_1" LaunchDir="D:/FPGA/FPGA/TP/TP1part1/TP1part1.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="impl_1" LaunchDir="D:/FPGA/FPGA/TP/TP1part1/TP1part1.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design">
 		<Parent Id="synth_1"/>
 	</Run>
 	<Parameters>

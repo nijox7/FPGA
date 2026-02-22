@@ -1,6 +1,6 @@
 # Rapport TP1 FPGA
 
-## Compteurs Imbriqués
+## Compteur imbriqués
 
 ### Observations
 On s'attend à ce que les LEDS s'allument selon la valeur des MSB du compteur Cpt2.
@@ -19,7 +19,7 @@ En analysant le code on s'est rendu compte que le compteur Cpt n'arrivera jamais
 On a donc changé la condition en remplaçant 70 000 000 par 20 000 000.
 
 
-## Compteur d'Impulsions
+## Compteurs d'impulsion
 
 ### Observation
 -Le code VHDL:
@@ -52,65 +52,4 @@ Il déclare des signaux supplémentaires comme 'Button_C_IBUF' et 'minusOp'.
 
 ### Correction et vérification
 En mettant deux signaux de compteur différents (cpt_1 et cpt_c), et en ajoutant 'set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets Button_L_IBUF]' l'implémentation fonctionne mais le phénomène de rebond n'est pas réglé.
-<!-- TODO voir pour les rebonds -->
 
-## Décodeur et Machine à état
-
-
-
-### Observations
-
-On a donc une architecture 'Selector' qui gère le mode de clignotement, une autre 'FSM' qui gère l'automate et un dernière 'Top' qui connecte les architecture entre elles (avec le compteur d'impulsions).
-
-Lors de la simulation, le programme se comporte bien. Le compteur est incrémenté par le bouton left 
-
-Après la programmation de la carte:
-
-- Lorsque l'on sélectionne le mode de clignotement des LEDs, et qu'on valide, les LEDs restent allumées.
-
-- Après un reset, les LEDs s'éteignent. Mais lorsque l'on met à 0 le reset, les LEDs s'allument faiblement alors qu'elles devraient restées éteintes.
-
-### Analyse et Correction
-
-En ouvrant le rapport de synthèse on voit ceci:
-'[Common 17-55] 'set_property' expects at least one object. ["D:/FPGA/FPGA/TP/TP1part1/TP1part1.srcs/constrs_1/imports/Partie_2_Etudes_de_Cas/2_Compteur_Impulsions/Impulse_Count_Basys.xdc":14]'
-
-Selector.vhd:
-On met tout dans un process et on rajoute la condition par défaut (count = 0, 1, 2)
-
---------------------------
-	-- Commande du Decodeur --
-	--------------------------
-	process(Sup, Count)
-	begin
-	   if Sup ='1' then Decode <= "11";     -- count > 9
-	   elsif Count > 5 then Decode <= "10"; -- 9 >= count > 5
-	   elsif Count > 2 then Decode <= "01"; -- 5 >= count > 2
-	   else Decode <= "00";                 -- count = 0, 1, 2
-	   end if;
-	end process;
-
-
-FSM.vhd:
-On va corriger ça pour CLIGN_OFF et les autres cas:
-when CLIGN_OFF	=> if Mode = "00" then EF <= LED_OFF;
-        elsif Mode = "11" then EF <= LED_ON;
-        end if;
-        if Cpt = Seuil then EF <= LED_ON;
-        end if;
-
-On évite les assignations multiples et on met les LEDS à 0 quand on est en CLIGN_OFF:
-when CLIGN_OFF	=>  LED <= "0000";
-        if Mode = "00" then EF <= LED_OFF;
-        elsif Mode = "11" then EF <= LED_ON;
-        elsif Cpt = Seuil then EF <= LED_ON;
-        else EF <= CLIGN_OFF;
-        end if;
-
-On rajoute un cas par défaut:
-when others =>  LED <= "0000";
-                EF  <= CLIGN_OFF;
-
-On change 96E3600 en 56E3600 (pour faire 24 000 000 avec le mode 01).
-MSB(0x96E3600) = 0b1001
-MSB(0x56E3600) = 0b0101 

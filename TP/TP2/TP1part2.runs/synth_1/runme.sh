@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/FPGA/FPGA/TP/TP1part2/TP1part2.runs/synth_1'
+HD_PWD='D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log TP2_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TP2_wrapper.tcl
+EAStep vivado -log TP3_design_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TP3_design_wrapper.tcl

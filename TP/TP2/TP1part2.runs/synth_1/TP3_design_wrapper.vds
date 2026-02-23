@@ -1,0 +1,362 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon Feb 23 17:22:54 2026
+# Process ID: 40212
+# Current directory: D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1
+# Command line: vivado.exe -log TP3_design_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TP3_design_wrapper.tcl
+# Log file: D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/TP3_design_wrapper.vds
+# Journal file: D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1\vivado.jou
+# Running On: DESKTOP-8A3KVDG, OS: Windows, CPU Frequency: 3408 MHz, CPU Physical cores: 4, Host memory: 17101 MB
+#-----------------------------------------------------------
+Sourcing tcl script 'C:/Users/Nijox/AppData/Roaming/Xilinx/Vivado/2021.2/Vivado_init.tcl'
+source TP3_design_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FAC/Master/M1/S2/FPGA/TP/ip_repo/my_led_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'd:/FAC/Master/M1/S2/FPGA/TP/ip_repo/my_led_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FAC/Master/M1/S2/FPGA/TP/ip_repo/my_led_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2021.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental D:/FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/synth_1/TP2_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/synth_1/TP2_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top TP3_design_wrapper -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 36708
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1255.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'TP3_design_wrapper' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/hdl/TP3_design_wrapper.vhd:23]
+INFO: [Synth 8-3491] module 'TP3_design' declared at 'd:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:1607' bound to instance 'TP3_design_i' of component 'TP3_design' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/hdl/TP3_design_wrapper.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'TP3_design' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:1620]
+INFO: [Synth 8-3491] module 'TP3_design_clk_wiz_1_0' declared at 'D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_clk_wiz_1_0_stub.vhdl:5' bound to instance 'clk_wiz_1' of component 'TP3_design_clk_wiz_1_0' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:1925]
+INFO: [Synth 8-638] synthesizing module 'TP3_design_clk_wiz_1_0' [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_clk_wiz_1_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'TP3_design_mdm_1_0' declared at 'D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_mdm_1_0_stub.vhdl:5' bound to instance 'mdm_1' of component 'TP3_design_mdm_1_0' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:1932]
+INFO: [Synth 8-638] synthesizing module 'TP3_design_mdm_1_0' [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_mdm_1_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'TP3_design_microblaze_0_0' declared at 'D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_microblaze_0_0_stub.vhdl:5' bound to instance 'microblaze_0' of component 'TP3_design_microblaze_0_0' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:1945]
+INFO: [Synth 8-638] synthesizing module 'TP3_design_microblaze_0_0' [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_microblaze_0_0_stub.vhdl:63]
+INFO: [Synth 8-3491] module 'TP3_design_microblaze_0_axi_intc_0' declared at 'D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_microblaze_0_axi_intc_0_stub.vhdl:5' bound to instance 'microblaze_0_axi_intc' of component 'TP3_design_microblaze_0_axi_intc_0' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:2031]
+INFO: [Synth 8-638] synthesizing module 'TP3_design_microblaze_0_axi_intc_0' [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_microblaze_0_axi_intc_0_stub.vhdl:36]
+INFO: [Synth 8-638] synthesizing module 'TP3_design_microblaze_0_axi_periph_0' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:1083]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_MHWEVE' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_MHWEVE' (1#1) [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_EJXOUK' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:158]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_EJXOUK' (2#1) [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_178S7UU' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:263]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_178S7UU' (3#1) [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:263]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_E8MCUJ' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:932]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_E8MCUJ' (4#1) [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:932]
+INFO: [Synth 8-3491] module 'TP3_design_xbar_0' declared at 'D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'TP3_design_xbar_0' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:1523]
+INFO: [Synth 8-638] synthesizing module 'TP3_design_xbar_0' [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 'TP3_design_microblaze_0_axi_periph_0' (5#1) [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:1083]
+INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_RYZO74' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:353]
+INFO: [Synth 8-3491] module 'TP3_design_dlmb_bram_if_cntlr_0' declared at 'D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_dlmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'TP3_design_dlmb_bram_if_cntlr_0' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:567]
+INFO: [Synth 8-638] synthesizing module 'TP3_design_dlmb_bram_if_cntlr_0' [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_dlmb_bram_if_cntlr_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'TP3_design_dlmb_v10_0' declared at 'D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_dlmb_v10_0_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'TP3_design_dlmb_v10_0' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:621]
+INFO: [Synth 8-638] synthesizing module 'TP3_design_dlmb_v10_0' [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_dlmb_v10_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'TP3_design_ilmb_bram_if_cntlr_0' declared at 'D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_ilmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'TP3_design_ilmb_bram_if_cntlr_0' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:649]
+INFO: [Synth 8-638] synthesizing module 'TP3_design_ilmb_bram_if_cntlr_0' [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_ilmb_bram_if_cntlr_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'TP3_design_ilmb_v10_0' declared at 'D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_ilmb_v10_0_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'TP3_design_ilmb_v10_0' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:703]
+INFO: [Synth 8-638] synthesizing module 'TP3_design_ilmb_v10_0' [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_ilmb_v10_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'TP3_design_lmb_bram_0' declared at 'D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_lmb_bram_0_stub.vhdl:5' bound to instance 'lmb_bram' of component 'TP3_design_lmb_bram_0' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:731]
+INFO: [Synth 8-638] synthesizing module 'TP3_design_lmb_bram_0' [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_lmb_bram_0_stub.vhdl:27]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_RYZO74' (6#1) [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:353]
+INFO: [Synth 8-3491] module 'TP3_design_my_led_0_0' declared at 'D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_my_led_0_0_stub.vhdl:5' bound to instance 'my_led_0' of component 'TP3_design_my_led_0_0' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:2169]
+INFO: [Synth 8-638] synthesizing module 'TP3_design_my_led_0_0' [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_my_led_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'TP3_design_rst_clk_wiz_1_100M_0' declared at 'D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_rst_clk_wiz_1_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_1_100M' of component 'TP3_design_rst_clk_wiz_1_100M_0' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:2194]
+INFO: [Synth 8-638] synthesizing module 'TP3_design_rst_clk_wiz_1_100M_0' [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_rst_clk_wiz_1_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'TP3_design_buttons_0' declared at 'D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_buttons_0_stub.vhdl:5' bound to instance 'sw' of component 'TP3_design_buttons_0' [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:2207]
+INFO: [Synth 8-638] synthesizing module 'TP3_design_buttons_0' [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/.Xil/Vivado-40212-DESKTOP-8A3KVDG/realtime/TP3_design_buttons_0_stub.vhdl:32]
+INFO: [Synth 8-256] done synthesizing module 'TP3_design' (7#1) [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/synth/TP3_design.vhd:1620]
+INFO: [Synth 8-256] done synthesizing module 'TP3_design_wrapper' (8#1) [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/hdl/TP3_design_wrapper.vhd:23]
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_E8MCUJ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_E8MCUJ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module s00_couplers_imp_E8MCUJ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module s00_couplers_imp_E8MCUJ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m02_couplers_imp_178S7UU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m02_couplers_imp_178S7UU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m02_couplers_imp_178S7UU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m02_couplers_imp_178S7UU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m01_couplers_imp_EJXOUK is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m01_couplers_imp_EJXOUK is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m01_couplers_imp_EJXOUK is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m01_couplers_imp_EJXOUK is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m00_couplers_imp_MHWEVE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_MHWEVE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m00_couplers_imp_MHWEVE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m00_couplers_imp_MHWEVE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module TP3_design_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module TP3_design_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module TP3_design_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module TP3_design_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module TP3_design_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module TP3_design_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module TP3_design_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module TP3_design_microblaze_0_axi_periph_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1255.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1255.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1255.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1255.250 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_microblaze_0_0/TP3_design_microblaze_0_0/TP2_microblaze_0_0_in_context.xdc] for cell 'TP3_design_i/microblaze_0'
+Finished Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_microblaze_0_0/TP3_design_microblaze_0_0/TP2_microblaze_0_0_in_context.xdc] for cell 'TP3_design_i/microblaze_0'
+Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_dlmb_v10_0/TP3_design_dlmb_v10_0/TP2_ilmb_v10_0_in_context.xdc] for cell 'TP3_design_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_dlmb_v10_0/TP3_design_dlmb_v10_0/TP2_ilmb_v10_0_in_context.xdc] for cell 'TP3_design_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_ilmb_v10_0/TP3_design_ilmb_v10_0/TP2_ilmb_v10_0_in_context.xdc] for cell 'TP3_design_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_ilmb_v10_0/TP3_design_ilmb_v10_0/TP2_ilmb_v10_0_in_context.xdc] for cell 'TP3_design_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_dlmb_bram_if_cntlr_0/TP3_design_dlmb_bram_if_cntlr_0/TP2_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'TP3_design_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_dlmb_bram_if_cntlr_0/TP3_design_dlmb_bram_if_cntlr_0/TP2_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'TP3_design_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_ilmb_bram_if_cntlr_0/TP3_design_ilmb_bram_if_cntlr_0/TP2_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'TP3_design_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_ilmb_bram_if_cntlr_0/TP3_design_ilmb_bram_if_cntlr_0/TP2_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'TP3_design_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_lmb_bram_0/TP3_design_lmb_bram_0/TP3_design_lmb_bram_0_in_context.xdc] for cell 'TP3_design_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_lmb_bram_0/TP3_design_lmb_bram_0/TP3_design_lmb_bram_0_in_context.xdc] for cell 'TP3_design_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_xbar_0/TP3_design_xbar_0/TP3_design_xbar_0_in_context.xdc] for cell 'TP3_design_i/microblaze_0_axi_periph/xbar'
+Finished Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_xbar_0/TP3_design_xbar_0/TP3_design_xbar_0_in_context.xdc] for cell 'TP3_design_i/microblaze_0_axi_periph/xbar'
+Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_microblaze_0_axi_intc_0/TP3_design_microblaze_0_axi_intc_0/TP3_design_microblaze_0_axi_intc_0_in_context.xdc] for cell 'TP3_design_i/microblaze_0_axi_intc'
+Finished Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_microblaze_0_axi_intc_0/TP3_design_microblaze_0_axi_intc_0/TP3_design_microblaze_0_axi_intc_0_in_context.xdc] for cell 'TP3_design_i/microblaze_0_axi_intc'
+Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_mdm_1_0/TP3_design_mdm_1_0/TP2_mdm_1_0_in_context.xdc] for cell 'TP3_design_i/mdm_1'
+Finished Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_mdm_1_0/TP3_design_mdm_1_0/TP2_mdm_1_0_in_context.xdc] for cell 'TP3_design_i/mdm_1'
+Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_clk_wiz_1_0/TP3_design_clk_wiz_1_0/TP3_design_clk_wiz_1_0_in_context.xdc] for cell 'TP3_design_i/clk_wiz_1'
+Finished Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_clk_wiz_1_0/TP3_design_clk_wiz_1_0/TP3_design_clk_wiz_1_0_in_context.xdc] for cell 'TP3_design_i/clk_wiz_1'
+Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_rst_clk_wiz_1_100M_0/TP3_design_rst_clk_wiz_1_100M_0/TP3_design_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'TP3_design_i/rst_clk_wiz_1_100M'
+Finished Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_rst_clk_wiz_1_100M_0/TP3_design_rst_clk_wiz_1_100M_0/TP3_design_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'TP3_design_i/rst_clk_wiz_1_100M'
+Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_buttons_0/TP3_design_buttons_0/TP3_design_buttons_0_in_context.xdc] for cell 'TP3_design_i/sw'
+Finished Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_buttons_0/TP3_design_buttons_0/TP3_design_buttons_0_in_context.xdc] for cell 'TP3_design_i/sw'
+Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_my_led_0_0/TP3_design_my_led_0_0/TP3_design_my_led_0_0_in_context.xdc] for cell 'TP3_design_i/my_led_0'
+Finished Parsing XDC File [d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_my_led_0_0/TP3_design_my_led_0_0/TP3_design_my_led_0_0_in_context.xdc] for cell 'TP3_design_i/my_led_0'
+Parsing XDC File [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.srcs/constrs_1/imports/TP2/Basys-3-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sw_tri_i[3]'. [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.srcs/constrs_1/imports/TP2/Basys-3-Master.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'sw_tri_i[3]'. [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.srcs/constrs_1/imports/TP2/Basys-3-Master.xdc:19]
+Finished Parsing XDC File [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.srcs/constrs_1/imports/TP2/Basys-3-Master.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.srcs/constrs_1/imports/TP2/Basys-3-Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/TP3_design_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.srcs/constrs_1/imports/TP2/Basys-3-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TP3_design_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TP3_design_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1255.250 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1255.250 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'TP3_design_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1255.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1255.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_clk_wiz_1_0/TP3_design_clk_wiz_1_0/TP3_design_clk_wiz_1_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  d:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.gen/sources_1/bd/TP3_design/ip/TP3_design_clk_wiz_1_0/TP3_design_clk_wiz_1_0/TP3_design_clk_wiz_1_0_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for TP3_design_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for TP3_design_i/microblaze_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for TP3_design_i/microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for TP3_design_i/microblaze_0_local_memory/ilmb_v10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for TP3_design_i/microblaze_0_local_memory/dlmb_bram_if_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for TP3_design_i/microblaze_0_local_memory/ilmb_bram_if_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for TP3_design_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for TP3_design_i/microblaze_0_axi_periph/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for TP3_design_i/microblaze_0_axi_periph. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for TP3_design_i/microblaze_0_axi_intc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for TP3_design_i/mdm_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for TP3_design_i/clk_wiz_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for TP3_design_i/rst_clk_wiz_1_100M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for TP3_design_i/sw. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for TP3_design_i/my_led_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1255.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1255.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port M00_ACLK in module TP3_design_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module TP3_design_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module TP3_design_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module TP3_design_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module TP3_design_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module TP3_design_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module TP3_design_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module TP3_design_microblaze_0_axi_periph_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1255.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1255.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1255.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1255.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1255.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1255.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1255.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1255.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1255.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1255.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------------------+----------+
+|      |BlackBox name                      |Instances |
++------+-----------------------------------+----------+
+|1     |TP3_design_xbar_0                  |         1|
+|2     |TP3_design_clk_wiz_1_0             |         1|
+|3     |TP3_design_mdm_1_0                 |         1|
+|4     |TP3_design_microblaze_0_0          |         1|
+|5     |TP3_design_microblaze_0_axi_intc_0 |         1|
+|6     |TP3_design_my_led_0_0              |         1|
+|7     |TP3_design_rst_clk_wiz_1_100M_0    |         1|
+|8     |TP3_design_buttons_0               |         1|
+|9     |TP3_design_dlmb_bram_if_cntlr_0    |         1|
+|10    |TP3_design_dlmb_v10_0              |         1|
+|11    |TP3_design_ilmb_bram_if_cntlr_0    |         1|
+|12    |TP3_design_ilmb_v10_0              |         1|
+|13    |TP3_design_lmb_bram_0              |         1|
++------+-----------------------------------+----------+
+
+Report Cell Usage: 
++------+----------------------------------------+------+
+|      |Cell                                    |Count |
++------+----------------------------------------+------+
+|1     |TP3_design_buttons_0_bbox               |     1|
+|2     |TP3_design_clk_wiz_1_0_bbox             |     1|
+|3     |TP3_design_dlmb_bram_if_cntlr_0_bbox    |     1|
+|4     |TP3_design_dlmb_v10_0_bbox              |     1|
+|5     |TP3_design_ilmb_bram_if_cntlr_0_bbox    |     1|
+|6     |TP3_design_ilmb_v10_0_bbox              |     1|
+|7     |TP3_design_lmb_bram_0_bbox              |     1|
+|8     |TP3_design_mdm_1_0_bbox                 |     1|
+|9     |TP3_design_microblaze_0_0_bbox          |     1|
+|10    |TP3_design_microblaze_0_axi_intc_0_bbox |     1|
+|11    |TP3_design_my_led_0_0_bbox              |     1|
+|12    |TP3_design_rst_clk_wiz_1_100M_0_bbox    |     1|
+|13    |TP3_design_xbar_0_bbox                  |     1|
+|14    |IBUF                                    |     4|
+|15    |OBUF                                    |    16|
++------+----------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1255.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 1255.250 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1255.250 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1255.250 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1256.848 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 3c6c9013
+INFO: [Common 17-83] Releasing license: Synthesis
+64 Infos, 40 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1256.848 ; gain = 1.598
+INFO: [Common 17-1381] The checkpoint 'D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.runs/synth_1/TP3_design_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TP3_design_wrapper_utilization_synth.rpt -pb TP3_design_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 23 17:23:42 2026...

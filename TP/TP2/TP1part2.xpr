@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="56" Path="D:/FPGA/FPGA/TP/TP1part2/TP1part2.xpr">
+<Project Version="7" Minor="56" Path="D:/FAC/Master/M1/S2/FPGA/TP/TP2/TP1part2.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="d36c4fb021444b5d82660196ee2168b8"/>
@@ -48,6 +48,8 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/my_led_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/my_led_1.0"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
     <Option Name="IPCachePermission" Val="read"/>
@@ -65,13 +67,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="0"/>
-    <Option Name="WTModelSimExportSim" Val="0"/>
-    <Option Name="WTQuestaExportSim" Val="0"/>
+    <Option Name="WTXSimExportSim" Val="2"/>
+    <Option Name="WTModelSimExportSim" Val="2"/>
+    <Option Name="WTQuestaExportSim" Val="2"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="0"/>
-    <Option Name="WTRivieraExportSim" Val="0"/>
-    <Option Name="WTActivehdlExportSim" Val="0"/>
+    <Option Name="WTVcsExportSim" Val="2"/>
+    <Option Name="WTRivieraExportSim" Val="2"/>
+    <Option Name="WTActivehdlExportSim" Val="2"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -88,38 +90,52 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/bd/TP2/TP2.bd">
+      <File Path="$PSRCDIR/sources_1/bd/TP3_design/TP3_design.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_lmb_bram_0/TP2_lmb_bram_0.xci">
-          <Proxy FileSetName="TP2_lmb_bram_0"/>
+        <CompFileExtendedInfo CompFileName="TP3_design.bd" FileRelPathName="ip/TP3_design_buttons_0/TP3_design_buttons_0.xci">
+          <Proxy FileSetName="TP3_design_buttons_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_ilmb_bram_if_cntlr_0/TP2_ilmb_bram_if_cntlr_0.xci">
-          <Proxy FileSetName="TP2_ilmb_bram_if_cntlr_0"/>
+        <CompFileExtendedInfo CompFileName="TP3_design.bd" FileRelPathName="ip/TP3_design_xbar_0/TP3_design_xbar_0.xci">
+          <Proxy FileSetName="TP3_design_xbar_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_microblaze_0_axi_intc_0/TP2_microblaze_0_axi_intc_0.xci">
-          <Proxy FileSetName="TP2_microblaze_0_axi_intc_0"/>
+        <CompFileExtendedInfo CompFileName="TP3_design.bd" FileRelPathName="ip/TP3_design_lmb_bram_0/TP3_design_lmb_bram_0.xci">
+          <Proxy FileSetName="TP3_design_lmb_bram_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="TP3_design.bd" FileRelPathName="ip/TP3_design_microblaze_0_axi_intc_0/TP3_design_microblaze_0_axi_intc_0.xci">
+          <Proxy FileSetName="TP3_design_microblaze_0_axi_intc_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="TP3_design.bd" FileRelPathName="ip/TP3_design_clk_wiz_1_0/TP3_design_clk_wiz_1_0.xci">
+          <Proxy FileSetName="TP3_design_clk_wiz_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="TP3_design.bd" FileRelPathName="ip/TP3_design_rst_clk_wiz_1_100M_0/TP3_design_rst_clk_wiz_1_100M_0.xci">
+          <Proxy FileSetName="TP3_design_rst_clk_wiz_1_100M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="TP3_design.bd" FileRelPathName="ip/TP3_design_my_led_0_0/TP3_design_my_led_0_0.xci">
+          <Proxy FileSetName="TP3_design_my_led_0_0"/>
+        </CompFileExtendedInfo>
+      </File>
+      <File Path="$PGENDIR/sources_1/bd/TP3_design/hdl/TP3_design_wrapper.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/TP2/TP2.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
         <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_microblaze_0_0/TP2_microblaze_0_0.xci">
           <Proxy FileSetName="TP2_microblaze_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_rst_clk_wiz_1_100M_0/TP2_rst_clk_wiz_1_100M_0.xci">
-          <Proxy FileSetName="TP2_rst_clk_wiz_1_100M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_mdm_1_0/TP2_mdm_1_0.xci">
-          <Proxy FileSetName="TP2_mdm_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_axi_gpio_0_0/TP2_axi_gpio_0_0.xci">
-          <Proxy FileSetName="TP2_axi_gpio_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_clk_wiz_1_0/TP2_clk_wiz_1_0.xci">
-          <Proxy FileSetName="TP2_clk_wiz_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_xbar_0/TP2_xbar_0.xci">
-          <Proxy FileSetName="TP2_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_dlmb_v10_0/TP2_dlmb_v10_0.xci">
+          <Proxy FileSetName="TP2_dlmb_v10_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_ilmb_v10_0/TP2_ilmb_v10_0.xci">
           <Proxy FileSetName="TP2_ilmb_v10_0"/>
@@ -127,23 +143,44 @@
         <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_dlmb_bram_if_cntlr_0/TP2_dlmb_bram_if_cntlr_0.xci">
           <Proxy FileSetName="TP2_dlmb_bram_if_cntlr_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_dlmb_v10_0/TP2_dlmb_v10_0.xci">
-          <Proxy FileSetName="TP2_dlmb_v10_0"/>
+        <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_ilmb_bram_if_cntlr_0/TP2_ilmb_bram_if_cntlr_0.xci">
+          <Proxy FileSetName="TP2_ilmb_bram_if_cntlr_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_lmb_bram_0/TP2_lmb_bram_0.xci">
+          <Proxy FileSetName="TP2_lmb_bram_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_axi_gpio_0_1/TP2_axi_gpio_0_1.xci">
           <Proxy FileSetName="TP2_axi_gpio_0_1"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_clk_wiz_1_0/TP2_clk_wiz_1_0.xci">
+          <Proxy FileSetName="TP2_clk_wiz_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_mdm_1_0/TP2_mdm_1_0.xci">
+          <Proxy FileSetName="TP2_mdm_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_microblaze_0_axi_intc_0/TP2_microblaze_0_axi_intc_0.xci">
+          <Proxy FileSetName="TP2_microblaze_0_axi_intc_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_axi_gpio_0_0/TP2_axi_gpio_0_0.xci">
+          <Proxy FileSetName="TP2_axi_gpio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_xbar_0/TP2_xbar_0.xci">
+          <Proxy FileSetName="TP2_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="TP2.bd" FileRelPathName="ip/TP2_rst_clk_wiz_1_100M_0/TP2_rst_clk_wiz_1_100M_0.xci">
+          <Proxy FileSetName="TP2_rst_clk_wiz_1_100M_0"/>
+        </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/TP2/hdl/TP2_wrapper.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="TP2_wrapper"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TopModule" Val="TP3_design_wrapper"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -180,6 +217,14 @@
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
       <Filter Type="Utils"/>
       <File Path="$PSRCDIR/utils_1/imports/synth_1/TP2_wrapper.dcp">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedInSteps" Val="synth_1"/>
+          <Attr Name="AutoDcp" Val="1"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/synth_1/TP2_wrapper.dcp">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -269,6 +314,48 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="TP3_design_lmb_bram_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/TP3_design_lmb_bram_0" RelGenDir="$PGENDIR/TP3_design_lmb_bram_0">
+      <Config>
+        <Option Name="TopModule" Val="TP3_design_lmb_bram_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="TP3_design_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/TP3_design_xbar_0" RelGenDir="$PGENDIR/TP3_design_xbar_0">
+      <Config>
+        <Option Name="TopModule" Val="TP3_design_xbar_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="TP3_design_microblaze_0_axi_intc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/TP3_design_microblaze_0_axi_intc_0" RelGenDir="$PGENDIR/TP3_design_microblaze_0_axi_intc_0">
+      <Config>
+        <Option Name="TopModule" Val="TP3_design_microblaze_0_axi_intc_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="TP3_design_clk_wiz_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/TP3_design_clk_wiz_1_0" RelGenDir="$PGENDIR/TP3_design_clk_wiz_1_0">
+      <Config>
+        <Option Name="TopModule" Val="TP3_design_clk_wiz_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="TP3_design_rst_clk_wiz_1_100M_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/TP3_design_rst_clk_wiz_1_100M_0" RelGenDir="$PGENDIR/TP3_design_rst_clk_wiz_1_100M_0">
+      <Config>
+        <Option Name="TopModule" Val="TP3_design_rst_clk_wiz_1_100M_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="TP3_design_buttons_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/TP3_design_buttons_0" RelGenDir="$PGENDIR/TP3_design_buttons_0">
+      <Config>
+        <Option Name="TopModule" Val="TP3_design_buttons_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="TP3_design_my_led_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/TP3_design_my_led_0_0" RelGenDir="$PGENDIR/TP3_design_my_led_0_0">
+      <Config>
+        <Option Name="TopModule" Val="TP3_design_my_led_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -289,7 +376,7 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="15">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/synth_1/TP2_wrapper.dcp" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/synth_1/TP2_wrapper.dcp" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
         <Step Id="synth_design"/>
@@ -299,7 +386,137 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="TP2_lmb_bram_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_lmb_bram_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_lmb_bram_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_lmb_bram_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_lmb_bram_0_synth_1">
+    <Run Id="TP2_lmb_bram_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_lmb_bram_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_lmb_bram_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_lmb_bram_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_lmb_bram_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_ilmb_bram_if_cntlr_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_ilmb_bram_if_cntlr_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_ilmb_bram_if_cntlr_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_ilmb_bram_if_cntlr_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_ilmb_bram_if_cntlr_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_microblaze_0_axi_intc_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_microblaze_0_axi_intc_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_microblaze_0_axi_intc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_microblaze_0_axi_intc_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_microblaze_0_axi_intc_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_microblaze_0_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_microblaze_0_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_microblaze_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_microblaze_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_microblaze_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_rst_clk_wiz_1_100M_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_rst_clk_wiz_1_100M_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_rst_clk_wiz_1_100M_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_rst_clk_wiz_1_100M_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_rst_clk_wiz_1_100M_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_mdm_1_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_mdm_1_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_mdm_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_mdm_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_mdm_1_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_axi_gpio_0_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_axi_gpio_0_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_axi_gpio_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_axi_gpio_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_axi_gpio_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_clk_wiz_1_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_clk_wiz_1_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_clk_wiz_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_clk_wiz_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_clk_wiz_1_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_xbar_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_xbar_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_xbar_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_ilmb_v10_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_ilmb_v10_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_ilmb_v10_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_ilmb_v10_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_ilmb_v10_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_dlmb_bram_if_cntlr_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_dlmb_bram_if_cntlr_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_dlmb_bram_if_cntlr_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_dlmb_bram_if_cntlr_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_dlmb_bram_if_cntlr_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_dlmb_v10_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_dlmb_v10_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_dlmb_v10_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_dlmb_v10_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_dlmb_v10_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_axi_gpio_0_1_synth_1" Type="Ft3:Synth" SrcSet="TP2_axi_gpio_0_1" Part="xc7a35tcpg236-1" ConstrsSet="TP2_axi_gpio_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_axi_gpio_0_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_axi_gpio_0_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP3_design_lmb_bram_0_synth_1" Type="Ft3:Synth" SrcSet="TP3_design_lmb_bram_0" Part="xc7a35tcpg236-1" ConstrsSet="TP3_design_lmb_bram_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP3_design_lmb_bram_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP3_design_lmb_bram_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -311,7 +528,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="TP2_ilmb_bram_if_cntlr_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_ilmb_bram_if_cntlr_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_ilmb_bram_if_cntlr_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_ilmb_bram_if_cntlr_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_ilmb_bram_if_cntlr_0_synth_1">
+    <Run Id="TP3_design_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="TP3_design_xbar_0" Part="xc7a35tcpg236-1" ConstrsSet="TP3_design_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP3_design_xbar_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP3_design_xbar_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -323,7 +540,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="TP2_microblaze_0_axi_intc_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_microblaze_0_axi_intc_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_microblaze_0_axi_intc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_microblaze_0_axi_intc_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_microblaze_0_axi_intc_0_synth_1">
+    <Run Id="TP3_design_microblaze_0_axi_intc_0_synth_1" Type="Ft3:Synth" SrcSet="TP3_design_microblaze_0_axi_intc_0" Part="xc7a35tcpg236-1" ConstrsSet="TP3_design_microblaze_0_axi_intc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP3_design_microblaze_0_axi_intc_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP3_design_microblaze_0_axi_intc_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -335,7 +552,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="TP2_microblaze_0_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_microblaze_0_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_microblaze_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_microblaze_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_microblaze_0_0_synth_1">
+    <Run Id="TP3_design_clk_wiz_1_0_synth_1" Type="Ft3:Synth" SrcSet="TP3_design_clk_wiz_1_0" Part="xc7a35tcpg236-1" ConstrsSet="TP3_design_clk_wiz_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP3_design_clk_wiz_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP3_design_clk_wiz_1_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -347,7 +564,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="TP2_rst_clk_wiz_1_100M_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_rst_clk_wiz_1_100M_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_rst_clk_wiz_1_100M_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_rst_clk_wiz_1_100M_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_rst_clk_wiz_1_100M_0_synth_1">
+    <Run Id="TP3_design_rst_clk_wiz_1_100M_0_synth_1" Type="Ft3:Synth" SrcSet="TP3_design_rst_clk_wiz_1_100M_0" Part="xc7a35tcpg236-1" ConstrsSet="TP3_design_rst_clk_wiz_1_100M_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP3_design_rst_clk_wiz_1_100M_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP3_design_rst_clk_wiz_1_100M_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -359,7 +576,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="TP2_mdm_1_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_mdm_1_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_mdm_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_mdm_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_mdm_1_0_synth_1">
+    <Run Id="TP3_design_buttons_0_synth_1" Type="Ft3:Synth" SrcSet="TP3_design_buttons_0" Part="xc7a35tcpg236-1" ConstrsSet="TP3_design_buttons_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP3_design_buttons_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP3_design_buttons_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -371,7 +588,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="TP2_axi_gpio_0_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_axi_gpio_0_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_axi_gpio_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_axi_gpio_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_axi_gpio_0_0_synth_1">
+    <Run Id="TP3_design_my_led_0_0_synth_1" Type="Ft3:Synth" SrcSet="TP3_design_my_led_0_0" Part="xc7a35tcpg236-1" ConstrsSet="TP3_design_my_led_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP3_design_my_led_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP3_design_my_led_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -383,79 +600,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="TP2_clk_wiz_1_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_clk_wiz_1_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_clk_wiz_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_clk_wiz_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_clk_wiz_1_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="TP2_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_xbar_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_xbar_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_xbar_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="TP2_ilmb_v10_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_ilmb_v10_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_ilmb_v10_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_ilmb_v10_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_ilmb_v10_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="TP2_dlmb_bram_if_cntlr_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_dlmb_bram_if_cntlr_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_dlmb_bram_if_cntlr_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_dlmb_bram_if_cntlr_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_dlmb_bram_if_cntlr_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="TP2_dlmb_v10_0_synth_1" Type="Ft3:Synth" SrcSet="TP2_dlmb_v10_0" Part="xc7a35tcpg236-1" ConstrsSet="TP2_dlmb_v10_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_dlmb_v10_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_dlmb_v10_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="TP2_axi_gpio_0_1_synth_1" Type="Ft3:Synth" SrcSet="TP2_axi_gpio_0_1" Part="xc7a35tcpg236-1" ConstrsSet="TP2_axi_gpio_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/TP2_axi_gpio_0_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_axi_gpio_0_1_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
         <Step Id="init_design"/>
@@ -473,7 +618,228 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="TP2_lmb_bram_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_lmb_bram_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_lmb_bram_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_lmb_bram_0_impl_1">
+    <Run Id="TP2_lmb_bram_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_lmb_bram_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_lmb_bram_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_lmb_bram_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_ilmb_bram_if_cntlr_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_ilmb_bram_if_cntlr_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_ilmb_bram_if_cntlr_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_ilmb_bram_if_cntlr_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_microblaze_0_axi_intc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_microblaze_0_axi_intc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_microblaze_0_axi_intc_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_microblaze_0_axi_intc_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_microblaze_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_microblaze_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_microblaze_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_microblaze_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_rst_clk_wiz_1_100M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_rst_clk_wiz_1_100M_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_rst_clk_wiz_1_100M_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_rst_clk_wiz_1_100M_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_mdm_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_mdm_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_mdm_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_mdm_1_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_axi_gpio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_axi_gpio_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_axi_gpio_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_axi_gpio_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_clk_wiz_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_clk_wiz_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_clk_wiz_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_clk_wiz_1_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_xbar_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_xbar_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_ilmb_v10_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_ilmb_v10_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_ilmb_v10_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_ilmb_v10_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_dlmb_bram_if_cntlr_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_dlmb_bram_if_cntlr_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_dlmb_bram_if_cntlr_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_dlmb_bram_if_cntlr_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_dlmb_v10_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_dlmb_v10_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_dlmb_v10_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_dlmb_v10_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP2_axi_gpio_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_axi_gpio_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_axi_gpio_0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/TP2_axi_gpio_0_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="TP3_design_lmb_bram_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP3_design_lmb_bram_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP3_design_lmb_bram_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP3_design_lmb_bram_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
           <Desc>Default settings for Implementation.</Desc>
@@ -492,7 +858,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="TP2_ilmb_bram_if_cntlr_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_ilmb_bram_if_cntlr_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_ilmb_bram_if_cntlr_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_ilmb_bram_if_cntlr_0_impl_1">
+    <Run Id="TP3_design_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP3_design_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP3_design_xbar_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP3_design_xbar_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
           <Desc>Default settings for Implementation.</Desc>
@@ -511,7 +877,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="TP2_microblaze_0_axi_intc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_microblaze_0_axi_intc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_microblaze_0_axi_intc_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_microblaze_0_axi_intc_0_impl_1">
+    <Run Id="TP3_design_microblaze_0_axi_intc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP3_design_microblaze_0_axi_intc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP3_design_microblaze_0_axi_intc_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP3_design_microblaze_0_axi_intc_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
           <Desc>Default settings for Implementation.</Desc>
@@ -530,7 +896,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="TP2_microblaze_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_microblaze_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_microblaze_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_microblaze_0_0_impl_1">
+    <Run Id="TP3_design_clk_wiz_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP3_design_clk_wiz_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP3_design_clk_wiz_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP3_design_clk_wiz_1_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
           <Desc>Default settings for Implementation.</Desc>
@@ -549,7 +915,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="TP2_rst_clk_wiz_1_100M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_rst_clk_wiz_1_100M_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_rst_clk_wiz_1_100M_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_rst_clk_wiz_1_100M_0_impl_1">
+    <Run Id="TP3_design_rst_clk_wiz_1_100M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP3_design_rst_clk_wiz_1_100M_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP3_design_rst_clk_wiz_1_100M_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP3_design_rst_clk_wiz_1_100M_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
           <Desc>Default settings for Implementation.</Desc>
@@ -568,7 +934,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="TP2_mdm_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_mdm_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_mdm_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_mdm_1_0_impl_1">
+    <Run Id="TP3_design_buttons_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP3_design_buttons_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP3_design_buttons_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP3_design_buttons_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
           <Desc>Default settings for Implementation.</Desc>
@@ -587,121 +953,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="TP2_axi_gpio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_axi_gpio_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_axi_gpio_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_axi_gpio_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="TP2_clk_wiz_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_clk_wiz_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_clk_wiz_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_clk_wiz_1_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="TP2_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_xbar_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_xbar_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="TP2_ilmb_v10_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_ilmb_v10_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_ilmb_v10_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_ilmb_v10_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="TP2_dlmb_bram_if_cntlr_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_dlmb_bram_if_cntlr_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_dlmb_bram_if_cntlr_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_dlmb_bram_if_cntlr_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="TP2_dlmb_v10_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_dlmb_v10_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_dlmb_v10_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_dlmb_v10_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="TP2_axi_gpio_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP2_axi_gpio_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP2_axi_gpio_0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP2_axi_gpio_0_1_impl_1">
+    <Run Id="TP3_design_my_led_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="TP3_design_my_led_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="TP3_design_my_led_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/TP3_design_my_led_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
           <Desc>Default settings for Implementation.</Desc>

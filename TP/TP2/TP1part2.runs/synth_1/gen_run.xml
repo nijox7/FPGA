@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1771280043" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/TP2_wrapper.dcp">
-  <File Type="PA-TCL" Name="TP2_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="TP2_wrapper_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="TP2_wrapper_reports.tcl"/>
-  <File Type="RDS-RDS" Name="TP2_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="TP2_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="TP2_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="TP2_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="TP2_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="TP2_wrapper_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1771863769" LaunchIncrCheckpoint="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/synth_1/TP2_wrapper.dcp">
+  <File Type="PA-TCL" Name="TP3_design_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="TP3_design_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="TP3_design_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="TP3_design_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="TP3_design_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="TP3_design_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="TP3_design_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="TP3_design_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="TP3_design_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/TP3_design/TP3_design.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/TP3_design/hdl/TP3_design_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/TP2/TP2.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -20,14 +34,14 @@
     </File>
     <File Path="$PGENDIR/sources_1/bd/TP2/hdl/TP2_wrapper.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="TP2_wrapper"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="TP3_design_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -54,6 +68,14 @@
         <Attr Name="AutoDcp" Val="1"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../../../../../../FPGA/FPGA/TP/TP1part2/TP1part2.srcs/utils_1/imports/synth_1/TP2_wrapper.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
@@ -63,16 +85,23 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="TP2_rst_clk_wiz_1_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="TP3_design_rst_clk_wiz_1_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="TP2_lmb_bram_0"/>
   <BlockFileSet Type="BlockSrcs" Name="TP2_ilmb_bram_if_cntlr_0"/>
   <BlockFileSet Type="BlockSrcs" Name="TP2_microblaze_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="TP2_microblaze_0_axi_intc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="TP2_mdm_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="TP2_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="TP3_design_clk_wiz_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="TP2_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="TP3_design_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="TP2_clk_wiz_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="TP2_ilmb_v10_0"/>
   <BlockFileSet Type="BlockSrcs" Name="TP2_axi_gpio_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="TP2_dlmb_bram_if_cntlr_0"/>
   <BlockFileSet Type="BlockSrcs" Name="TP2_dlmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="TP3_design_lmb_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="TP3_design_microblaze_0_axi_intc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="TP3_design_buttons_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="TP3_design_my_led_0_0"/>
 </GenRun>
